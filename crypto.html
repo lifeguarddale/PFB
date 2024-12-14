@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <!--Page Title-->
-    <title>Apply To | Corporate Neuroservice</title>
+    <title>Pay Now | Crypto Patron</title>
 
     <!--Meta Keywords and Description-->
     <meta name="keywords" content="">
@@ -29,7 +29,7 @@
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
-<body style="background-image: url('images/eels.gif'); background-size: 70.5%; background-position: right; background-repeat: no-repeat;">
+<body style="background-image: url('images/fish.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <!-- Contact page content here -->
 
 
@@ -60,13 +60,13 @@
                     <!--Logo-->
                     <div id="logo">
 
-                        <!--Logo that is shown on the banner-->
-                        <img src="images/logo-4.png" id="banner-logo" alt="Landing Page"/>
-                        <!--End of Banner Logo-->
-
-                        <!--The Logo that is shown on the sticky Navigation Bar-->
-                        <img src="images/logo-3.png" id="navigation-logo" alt="Landing Page"/>
-                        <!--End of Navigation Logo-->
+                         <!--Logo that is shown on the banner-->
+                         <img src="images/logo-4.png" id="banner-logo" alt="Landing Page"/>
+                         <!--End of Banner Logo-->
+ 
+                         <!--The Logo that is shown on the sticky Navigation Bar-->
+                         <img src="images/logo-4.png" id="navigation-logo" alt="Landing Page"/>
+                         <!--End of Navigation Logo-->
 
                     </div>
                     <!--End of Logo-->
@@ -78,7 +78,7 @@
                         <ul>
                             <li>
                                
-                                <li style="list-style: none; display: inline; position: relative; z-index: 100; left: -3px; top: -15px;">
+                                <li style="list-style: none; display: inline; position: relative; z-index: 100; left: -3.5px; top: -16.5px;">
                                     <a href="https://lifeguarddale.github.io/PFB/" 
                                        style="text-decoration: none; 
                                               padding: 10px;
@@ -87,8 +87,8 @@
                                               border: 2px solid #007BFF; 
                                               border-radius: 50%; 
                                               display: display-box; 
-                                              width: 62px; 
-                                              height: 62px; 
+                                              width: 65px; 
+                                              height: 65px; 
                                               text-align: center; 
                                               line-height: 36px; 
                                               font-weight: bold; 
@@ -112,47 +112,152 @@
         </div><!--End of Header-->
 
 
-        <section class="contact-section">
-            <div class="contact-intro">
-              <h2 class="contact-title">Make the dream work.</h2>
-              <p class="contact-description">
-                We'll monitor the whole team.
+        <section class="donation-section">
+            <div class="donation-container">
+              <h3 class="donation-title">Decentralization</h3>
+              <p class="donation-description">
+                <h2>Big little fish.</h2>Crypto patrons recieve a plethora of benefits.
               </p>
-            </div>
-          
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          
-              <input type="hidden" name="access_key" value="48616f0e-6d0d-442d-8768-5b46f24c9904" />
-              <input type="hidden" name="subject" value="New App. Form Submission" />
-              <input type="hidden" name="from_name" value="Plattinum.FB Application" />
-              <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
-          
-              <div class="form-group-container">
-                <div class="form-group">
-                  <label for="name" class="form-label">Name</label>
-                  <input id="name" name="name" class="form-input" placeholder="Business name" type="text" />
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">Email</label>
-                  <input id="email" name="email" class="form-input" placeholder="Business email" type="email" />
-                </div>
-                <div class="form-group">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input id="phone" name="phone" class="form-input" placeholder="+1 (772) XXXX" type="text" />
-                </div>
-                <div class="form-group">
-                  <label for="message" class="form-label">Team</label>
-                  <textarea class="form-textarea" id="message" name="message" placeholder="Please include team capacity (a human typing this out let's us bypass Captcha)."></textarea>
-                </div>
+              <div class="wallet-display">
+                <p class="wallet-label">our wallet</p>
+                <p class="wallet-address" id="coinbase-wallet">0xBF1Cc482F51F500eAcd6955776d4D921d8a43380</p>
+                <button class="copy-button" onclick="copyToClipboard('coinbase-wallet')">Copy Wallet Address</button>
               </div>
-              <!-- Custom URL -->
-              <input type="hidden" name="redirect" value="https://lifeguarddale.github.io/PFB/thankyou.html">
-
-              <button class="form-submit" type="submit">APPLY</button>
-            </form>
+              <div class="copy-message" id="copy-message" style="display: none;">
+                successfully copied to clipboard!
+              </div>
+            </div>
+          </section>
           
+          <script>
+            function copyToClipboard(walletId) {
+              const walletAddress = document.getElementById(walletId).textContent;
+              navigator.clipboard.writeText(walletAddress).then(() => {
+                const copyMessage = document.getElementById('copy-message');
+                copyMessage.style.display = 'block';
+                setTimeout(() => {
+                  copyMessage.style.display = 'none';
+                }, 2000);
+              });
+            }
+          </script>
+          
+          <style>
+            body {
+              margin: 0;
+              font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+              background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+              height: 100vh;
+              display: relative;
+              justify-content: center;
+              align-items: center;
+            }
+          
+            .donation-section {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              padding: 1rem;
+            }
+          
+            .donation-container {
+              background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+              border: 2px solid #ddd;
+              border-radius: 8px;
+              padding: 2rem;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              text-align: center;
+              max-width: 500px;
+              width: 90%;
+              backdrop-filter: blur(6px); /* Optional: adds a blur effect behind the box */
+            }
+          
+            .donation-title {
+              font-size: 1.8rem;
+              color: #333;
+              margin-bottom: 1rem;
+            }
+          
+            .donation-description {
+              font-size: 1.2rem;
+              color: #555;
+              margin-bottom: 1.5rem;
+            }
+          
+            .wallet-display {
+              margin-top: 1rem;
+            }
+          
+            .wallet-label {
+              font-size: 1rem;
+              color: #666;
+              margin-bottom: 0.5rem;
+            }
+          
+            .wallet-address {
+              font-family: monospace;
+              font-size: 1.1rem;
+              color: #333;
+              background-color: #f9f9f9;
+              padding: 0.5rem;
+              border-radius: 15px;
+              display: inline-block;
+              margin-bottom: 0.5rem;
+            }
+          
+            .copy-button {
+              padding: 0.6rem 1.2rem;
+              background-color: #e99000;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 1rem;
+              transition: background-color 0.3s ease;
+            }
+          
+            .copy-button:hover {
+              background-color: #df6800;
+            }
+            .copy-message {
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                color: rgb(139, 63, 0);
+                font-weight: bold;
+                position: relative;
+                animation: textGlow 1.5s ease-in-out infinite, slideDown 0.5s ease-out forwards;
+              }
+              
+              /* Glowing Text Effect */
+              @keyframes textGlow {
+                0% {
+                  text-shadow: 0 0 5px rgba(255, 140, 0, 0.7), 0 0 10px rgba(255, 140, 0, 0.7), 0 0 15px rgba(255, 140, 0, 0.7);
+                }
+                50% {
+                  text-shadow: 0 0 10px rgba(255, 140, 0, 1), 0 0 20px rgba(255, 140, 0, 1), 0 0 30px rgba(255, 140, 0, 1);
+                }
+                100% {
+                  text-shadow: 0 0 5px rgba(255, 140, 0, 0.7), 0 0 10px rgba(255, 140, 0, 0.7), 0 0 15px rgba(255, 140, 0, 0.7);
+                }
+              }
+              
+              /* Slide-down Animation */
+              @keyframes slideDown {
+                from {
+                  opacity: 0;
+                  transform: translateY(-20px); /* Starts above */
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0); /* Ends at the normal position */
+                }
+              }
+          </style>
+
           </section>
         
+         
             <!--Footer-->
             <footer id="landing-footer" class="clearfix">
                 <div class="row clearfix">
@@ -166,11 +271,7 @@
                                 <i class="fa fa-regular fa-bookmark"></i><span>Substack</span>
                             </a>
                         </li>
-                        <li>
-                            <a target="_blank" title="Crypto" href="donate.html">
-                                <i class="fa fa-brands fa-bitcoin"></i><span>Crypto</span>
-                            </a>
-                        </li>
+                     
                        
                         <li>
                             <a target="_blank" title="Our Team" href="http://www.instagram.com/username">
